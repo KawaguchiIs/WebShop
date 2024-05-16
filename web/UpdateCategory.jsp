@@ -9,12 +9,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Update Category Page</title>
+        <title>Update Category</title>
+        <link rel="stylesheet" href ="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     </head>
     <body>
-        <h1>Update category</h1>
-        <form action="updatecategory" method="post">
-            <table>
+        <%@include file="adminHeader.jsp" %>
+        <div class="table-list">
+        <h1>Update Category</h1>
+        <form action="updateCategory" method="post">
+            <table class="content-table">
                 <tr>
                     <td>Id</td>
                     <td>
@@ -35,11 +39,11 @@
                 </tr>
                 <tr>
                     <td>
-                        <button type="submit">Update Category</button>
+                        <button class="btn-table" type="submit"><a>Update Category</a></button>
                     </td>
                 </tr>
             </table>
         </form>
-
+        </div>
     </body>
 </html>

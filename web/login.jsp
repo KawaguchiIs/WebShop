@@ -9,16 +9,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Login</title>
+        <link rel="stylesheet" href ="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     </head>
-    <body>
-        <h1>Login</h1>
-        <h3>${message}</h3>    
-        <form action="login" method ="POST">
-            Username:<input type ="text" name ="user"/>
-            Password:<input type="password" name="pass"/>
-            <input type="submit" value="Login">
-        </form>
-        <a href="SignUp.jsp">Sign up</a>
+    <body style=" background: url(./assets/img/wallpaper.jpg) fixed center no-repeat;">
+        <div class="login-signup">
+            <h1>Login</h1>
+            <h3 style="color: red;">${message}</h3>    
+            <form action="login" method ="POST">
+                <div class="input-box">
+                    Username:<input type ="text" name ="user" placeholder="Username" required/>
+                </div>
+                <div class="input-box">
+                Password:<input type="password" name="pass" placeholder="Password" required/>
+                </div>
+                <input class="btn-login" type="submit" value="Login">
+            </form>
+            <p>Don't have a account? <a href="SignUp.jsp">Sign up</a><p>
+        </div>
     </body>
 </html>

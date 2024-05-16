@@ -7,6 +7,9 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
+/*body{
+    background: url(../img/wallpaper.jpg) fixed center no-repeat  ;
+}*/
 
 .clear {
     clear: both;
@@ -286,7 +289,7 @@ input#search-product  {
     box-sizing: content-box;
     overflow: hidden;
     font-weight: 500;
-    cursor: pointer;
+    cursor: pointer;    
 }
 .btn-table:hover {
     background: #ccc;
@@ -302,3 +305,76 @@ input#search-product  {
     text-align: center;
 }
 
+.login-signup {
+    text-align: center;
+    margin: 200px 600px;
+    width: 420px;
+    background-color: transparent;
+    color: #fff;  
+    padding: 30px 40px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.login-signup h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.login-signup .input-box {
+    width: 100%;
+    height: 50%;
+    
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 70%;
+    height: 100%;
+    background: #aaa;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color : #fff;
+}
+
+.login-signup .btn-login {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600; 
+}
+
+.login-signup p {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.login-signup p a{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-signup p a:hover{
+    text-decoration: underline;
+}

@@ -9,24 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Admin</title>
+        <link rel="stylesheet" href ="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     </head>
     <body>
-        <h1>Welcome to Admin Home Page</h1>
-    <c:if test="${sessionScope.acc == null}">
-        
-        <a class="nav-link" href="Login.jsp">Login</a>
-    </c:if>
-    <c:if test="${sessionScope.acc != null}">
-        <a class="nav-link" href="#">Hello ${sessionScope.acc.full_name}</a>
-        <br>
-        <a class="nav-link" href="logout">Logout</a>
-    </c:if>
-        <br>
-        <a class="nav-link" href="manageaccount">Manage Account</a>
-        <br>
-        <a class="nav-link" href="managecategory">Manage Category</a>
-        <br>
-        <a class="nav-link" href="manageproduct">Manage Product</a>
+        <%@include file="adminHeader.jsp" %>
+        <h1 style="margin-top: 50px">Welcome to Admin Home</h1>
     </body>
 </html>

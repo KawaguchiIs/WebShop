@@ -9,12 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add Category Page</title>
+        <title>Add Category</title>
+        <link rel="stylesheet" href ="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     </head>
     <body>
-        <h1>Add Category</h1>
-        <form action="addcategory" method="post">
-            <table>
+        <%@include file="adminHeader.jsp" %>
+        <div class="table-list">   
+        <form action="addCategory" method="post">
+            <table class="content-table">
                 <tr>
                     <td>Id</td>
                     <td>
@@ -35,11 +38,11 @@
                 </tr>
                 <tr>
                     <td>
-                        <button type="submit">Add Category</button>
+                        <button class="btn-table" type="submit"><a>Add Category</a></button>
                     </td>
                 </tr>
             </table>
         </form>
-
+        </div>
     </body>
 </html>

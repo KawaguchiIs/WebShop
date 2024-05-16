@@ -10,12 +10,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Update Product Page</title>
+        <title>Update Product</title>
+        <link rel="stylesheet" href ="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     </head>
     <body>
-        <h1>Update category</h1>
-        <form action="updateproduct" method="post">
-            <table>
+        <%@include file="adminHeader.jsp" %>
+        <div class="table-list">
+        <h1>Update Product</h1>
+        <form action="updateProduct" method="post">
+            <table class="content-table">
                 <tr>
                     <td>Id</td>
                     <td><input value = "${proObj.id}" type="text" name="id" readonly></td>
@@ -49,7 +53,7 @@
                     <td><input value = "${proObj.category.id}" type="text" name="cid"></td>
                 </tr>-->
                 <tr>
-                    <td>Cid select</td>
+                    <td>select category</td>
                     <td>
                         <select name="category" aria-label="Default select example">
                             <c:forEach items="${listCate}" var="j">
@@ -60,10 +64,11 @@
                 </tr>
                 <tr>
                     <td>
-                        <button type="submit">Update Product</button>
+                        <button class="btn-table" type="submit"><a>Update Product</a></button>
                     </td>
                 </tr>
             </table>
         </form>
+        </div>
     </body>
 </html>

@@ -9,10 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Manage Account Page</title>
+        <title>Manage Account</title>
+                <link rel="stylesheet" href ="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     </head>
     <body>
-        <table border="1px solid black">
+        <%@include file="adminHeader.jsp" %>
+        <div class="table-list">
+        <table class="content-table">
+            <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -23,10 +28,12 @@
                 <th>Lock account</th>
                 
             </tr>
+            </thead>
+            <tbody>
             <c:forEach items="${listAcc}" var="i">
                 <tr>
                     <td>${i.id}</td>
-                    <td>${i.full_name}</td>
+                    <td>${i.name}</td>
                     <td>${i.username}</td>
                     <td>${i.password}</td>
                     <td>
@@ -40,16 +47,18 @@
 
                     <td>
                         <c:if test="${i.isLock == 1}">
-                            <a href="updateLockA?id=${i.id}&status=0">Unlock</a>
+                            <button class="btn-table"><a href="updateLockA?id=${i.id}&status=0">Unlock</a></button>
                             
                         </c:if>
                         <c:if test="${i.isLock == 0}">
-                            <a href="updateLockA?id=${i.id}&status=1">Lock</a>                            
+                            <button class="btn-table"><a href="updateLockA?id=${i.id}&status=1">Lock</a></button>                            
                         </c:if>        
                     </td>
                 </tr>
             </c:forEach>
+            </tbody>
         </table>
-            
+        </div>        
     </body>
+
 </html>
