@@ -5,7 +5,6 @@
 
 package controller;
 
-import dal.AccountDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -13,15 +12,13 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-import model.Account;
 
 /**
  *
  * @author Acer Helios
  */
-@WebServlet(name="LoginServlet", urlPatterns={"/login"})
-public class LoginServlet extends HttpServlet {
+@WebServlet(name="AdminServlet", urlPatterns={"/admin"})
+public class AdminServlet extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -32,38 +29,18 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-//        String user = request.getParameter("user");
-//        String pass = request.getParameter("pass");
-//        AccountDAO accountDao = new AccountDAO();
-//        Account account = accountDao.login(user, pass);
-//        if(account == null){
-//            request.setAttribute("error", "Account is not exist");
-//            request.getRequestDispatcher("login.jsp").forward(request, response);  
-//        }else{
-//            HttpSession session = request.getSession();
-//            session.setAttribute("account",account);
-//            request.getRequestDispatcher("home").forward(request, response);
-//        }
-        String username = request.getParameter("user");
-        String password = request.getParameter("pass");
-        
-        AccountDAO loginDAO = new AccountDAO();
-        Account account = loginDAO.login(username, password);
-        if(account == null){
-            request.setAttribute("message", "Wrong username or password");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
-        }else if(account.getIsLock()==1){
-            request.setAttribute("message", "Your account is locked");
-            request.getRequestDispatcher("login.jsp").forward(request, response);      
-        }else{
-            HttpSession session = request.getSession();
-            session.setAttribute("account", account);
-            if(account.getIsAdmin()==1){
-                response.sendRedirect("admin");
-            }else{
-                response.sendRedirect("home");
-            }
-            
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet AdminServlet</title>");  
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet AdminServlet at " + request.getContextPath () + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     } 
 
@@ -78,7 +55,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        processRequest(request, response);
+        request.getRequestDispatcher("Admin.jsp").forward(request, response);
     } 
 
     /** 

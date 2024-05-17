@@ -12,6 +12,9 @@
                 <c:set var="cate" value = "${requestScope.data}"/>
                 <c:set var="cid" value = "${requestScope.cid}" />
                 <li><a href="home">Home</a></li>
+                <c:if test="${sessionScope.account.isAdmin == 1}">  
+                <li><a href="admin">Admin Home</a></li>
+                </c:if>
                 <c:if test="${sessionScope.account != null}">     
                 <li><a href="order">Order</a></li>
                 </c:if>

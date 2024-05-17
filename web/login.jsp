@@ -13,7 +13,11 @@
         <link rel="stylesheet" href ="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     </head>
-    <body style=" background: url(./assets/img/wallpaper.jpg) fixed center no-repeat;">
+    <body style=" background: url(./assets/img/wallpaper.jpg) fixed center no-repeat;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;">
         <div class="login-signup">
             <h1>Login</h1>
             <h3 style="color: red;">${message}</h3>    
