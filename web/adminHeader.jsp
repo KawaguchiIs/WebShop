@@ -12,7 +12,7 @@
                  <c:if test="${sessionScope.account == null}">       
                 <li><a href="login">Login</a></li>
                 </c:if>
-                <c:if test="${sessionScope.account != null}">  
+                <c:if test="${sessionScope.account.isAdmin == 1}">  
                 <li><a href="manageAccount">Manage Account</a></li>
                 <li><a href="manageCategory">Manage Category</a></li>
                 <li><a href="manageProduct">Manage Product</a></li>          

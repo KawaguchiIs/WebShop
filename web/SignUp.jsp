@@ -37,7 +37,7 @@
             </div>
             <input class="btn-login" type="submit" value="Sign up">
         </form>
-        <p>You already have a account! <a href="login.jsp">Login</a><p>
+        <p>You already have a account! <a href="login">Login</a><p>
         </div>
     </body>
 </html>
