@@ -13,8 +13,8 @@
         <link rel="stylesheet" href ="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     </head>
-    <body>
+    <body style=" background: url(./assets/img/wallpaper.jpg) fixed center no-repeat;">
         <%@include file="adminHeader.jsp" %>
-        <h1 style="margin-top: 50px">Welcome to Admin Home</h1>
+        <h1 style="margin-top: 50px; color:#fff">Welcome to Admin Home</h1>
     </body>
 </html>

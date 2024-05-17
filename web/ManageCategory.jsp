@@ -41,7 +41,7 @@
             </c:forEach>
             <tbody>
         </table>
-            <button class="btn-table"><a href="AddCategory.jsp">Add Category</a></button>
+            <button class="btn-table"><a href="addCategory">Add Category</a></button>
         </div>
     </body>
 </html>

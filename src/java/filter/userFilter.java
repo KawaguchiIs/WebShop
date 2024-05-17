@@ -104,12 +104,12 @@ public class userFilter implements Filter {
         }
         
         doBeforeProcessing(request, response);
-//        HttpServletRequest req = (HttpServletRequest)request;
-//        HttpServletResponse res =(HttpServletResponse)response;
-//        String uri = req.getServletPath();
-//        if(uri.endsWith(".jsp")){
-//            res.sendRedirect("home");
-//        }
+        HttpServletRequest req = (HttpServletRequest)request;
+        HttpServletResponse res =(HttpServletResponse)response;
+        String uri = req.getServletPath();
+        if(uri.endsWith(".jsp")){
+            res.sendRedirect("home");
+        }
         
         Throwable problem = null;
         try {
